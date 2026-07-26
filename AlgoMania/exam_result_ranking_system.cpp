@@ -125,7 +125,7 @@ void topNToppers() {
         int total = p.second.total;
         int roll = p.second.roll;
         minHeap.push({total, roll});
-        if ((int)minHeap.size() > n) minHeap.pop(); // remove smallest, keep top N
+        if (minHeap.size() > n) minHeap.pop(); // remove smallest, keep top N
     }
 
     vector<pair<int,int>> toppers;
