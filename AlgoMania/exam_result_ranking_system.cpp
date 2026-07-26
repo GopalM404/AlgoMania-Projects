@@ -66,7 +66,7 @@ void addStudent() {
         cin >> s.marks[i];
         s.total += s.marks[i];
     }
-    s.percentage = (double)s.total / (NUM_SUBJECTS * 100) * 100.0;
+    s.percentage = (double)s.total / (NUM_SUBJECTS);
     s.grade = computeGrade(s.percentage);
 
     studentMap[s.roll] = s;
