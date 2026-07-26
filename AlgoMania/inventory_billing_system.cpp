@@ -134,10 +134,9 @@ void cancelLastBilledItem() {
 
     // restore stock
     auto it = inventory.find(last.sku);
-    if (it != inventory.end()) {
-        it->second.quantity += last.qty;
-        it->second.unitsSold -= last.qty;
-    }
+ 
+    it->second.quantity += last.qty;
+    it->second.unitsSold -= last.qty;
     currentBillTotal -= last.lineTotal;
 
     cout << "Cancelled: " << last.qty << " x " << last.name
